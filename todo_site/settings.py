@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-qvvy1x^r6z+4rcs#g8c79d522kp*00ho)!b(^xk^*&=29+x++k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "todo-app-production-1ee3.up.railway.app"
+    ]
 
 
 # Application definition
@@ -123,6 +125,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://todo-app-production-1ee3.up.railway.app"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
